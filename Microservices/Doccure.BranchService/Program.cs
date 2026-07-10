@@ -1,8 +1,12 @@
+using Doccure.BranchService.Services; // Ayarlarýnýn bulunduðu klasörün namespace'i
+using Doccure.BranchService.Settings;
 using Microsoft.Extensions.Options;
-using Doccure.BranchService.Settings; // Ayarlarýnýn bulunduðu klasörün namespace'i
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddScoped<IBranchService, BranchService>();//IBranchService gorduðunde ,BranchService çaðýr
+builder.Services.AddAutoMapper(typeof(Program));
 // Add services to the container.
 
 // --- VERÝ TABANI AYARLARI BURAYA EKLENDÝ ---
