@@ -13,9 +13,12 @@ namespace Doccure.DoctorService.Dtos.DoctorDtos
         public string About { get; set; }
         public int ExperienceYear { get; set; }
         public decimal PricePerHour { get; set; }
-        public List<Education> Educations { get; set; }
-        public List<Experience> Experiences { get; set; }
-        public List<Award> Awards { get; set; }
+        public List<EducationDto> Educations { get; set; }
+        public List<ExperienceDto> Experiences { get; set; }
+        public List<AwardDto> Awards { get; set; }
+
+        //location entity properties
+        public List<LocationDto> Locations { get; set; }
         public List<string> Services { get; set; }
         public List<string> Specializations { get; set; }
     }

@@ -1,6 +1,6 @@
-﻿namespace Doccure.DoctorService.Entities
+﻿namespace Doccure.DoctorService.Dtos.DoctorDtos
 {
-    public class Award
+    public class AwardDto
     {
         public string Title { get; set; }
         public string Year { get; set; }
