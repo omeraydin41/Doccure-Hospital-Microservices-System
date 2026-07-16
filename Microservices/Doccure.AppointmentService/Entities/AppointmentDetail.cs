@@ -9,6 +9,7 @@
 
         // Randevunun şikayet detayı veya hastanın ön açıklaması
         public string Complaint { get; set; }
+        public string Notes { get; set; }
 
         // Doktorun muayene sonrası yazdığı tanı/teşhis bilgisi
         public string Diagnosis { get; set; }

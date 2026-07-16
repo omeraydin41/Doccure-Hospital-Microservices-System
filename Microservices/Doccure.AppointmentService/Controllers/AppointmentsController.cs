@@ -1,5 +1,5 @@
 ﻿using Doccure.AppointmentService.Dtos.AppointmentDtos;
-using Doccure.AppointmentService.Services;
+using Doccure.AppointmentService.Services.AppointmentService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

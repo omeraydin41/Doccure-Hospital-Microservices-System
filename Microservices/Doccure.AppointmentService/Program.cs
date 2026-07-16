@@ -1,5 +1,6 @@
 using Doccure.AppointmentService.Context;
-using Doccure.AppointmentService.Services;
+using Doccure.AppointmentService.Services.AppointmentDetailService;
+using Doccure.AppointmentService.Services.AppointmentService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddScoped<IAppointmentService, AppointmentService>();//IAppointmentService gördüðünde AppointmentService'i enjekte etmesi için DI container'a ekledik
+builder.Services.AddScoped<IAppointmentDetailService, AppointmentDetailService>();//IAppointmentDetailService gördüðünde AppointmentDetailService'i enjekte etmesi için DI container'a ekledik
 builder.Services.AddDbContext<AppointmentContext>();
 
 

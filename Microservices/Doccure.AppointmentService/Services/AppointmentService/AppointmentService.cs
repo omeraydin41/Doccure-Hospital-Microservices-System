@@ -4,7 +4,7 @@ using Doccure.AppointmentService.Dtos.AppointmentDtos;
 using Doccure.AppointmentService.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Doccure.AppointmentService.Services
+namespace Doccure.AppointmentService.Services.AppointmentService
 {
     public class AppointmentService : IAppointmentService
     {
