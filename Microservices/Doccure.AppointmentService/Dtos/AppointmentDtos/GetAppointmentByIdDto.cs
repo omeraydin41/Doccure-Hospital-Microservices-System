@@ -1,6 +1,6 @@
-﻿namespace Doccure.AppointmentService.Entities
+﻿namespace Doccure.AppointmentService.Dtos.AppointmentDtos
 {
-    public class Appointment
+    public class GetAppointmentByIdDto
     {
         public int AppointmentId { get; set; }
         public int DoctorId { get; set; }//mongodan geliyor 
@@ -8,7 +8,6 @@
         public DateTime AppointmentDate { get; set; }
         public string Status { get; set; }
         public decimal Price { get; set; }
-        public virtual AppointmentDetail AppointmentDetail { get; set; }
-        public virtual List<DoctorSchedule> DoctorSchedules { get; set; } 
+
     }
 }
