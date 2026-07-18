@@ -6,10 +6,10 @@ namespace Doccure.IdentityService.Context
 {
     public class DoccureContext : IdentityDbContext<AppUser>//<>  tıp guvenliği için IdentityDbContext kullanıyoruz. AppUser sınıfımızı burada belirtiyoruz.
     {
-        public DoccureContext(DbContextOptions<DoccureContext> options) : base(options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseSqlServer("Server=DESKTOP-MD57CH6;Database=DoccureIdentityDb;Trusted_Connection=True;TrustServerCertificate=True;");
         }
-
       
 
         /*
