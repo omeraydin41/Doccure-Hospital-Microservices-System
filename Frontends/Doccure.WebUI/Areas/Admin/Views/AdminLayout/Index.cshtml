@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    @await Component.InvokeAsync("_AdminLayoutStyleComponentPartial")
+    
+</head>
+<body>
+    @await Component.InvokeAsync("_AdminLayoutSidebarComponentPartial")
+    <main id="content">
+        @await Component.InvokeAsync("_AdminLayoutTopbarComponentPartial");
+    </main>
+
+    <h3>ömer</h3>
+</body>
+</html>
