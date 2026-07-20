@@ -25,7 +25,7 @@ namespace Doccure.PrescriptionService.Services.PrescriptionService
                 AppointmentId = dto.AppointmentId,
                 DoctorId = dto.DoctorId,
                 PatientId = dto.PatientId,
-                CreatedDate = DateTime.Now,
+                CreatedDate = DateTime.UtcNow,
 
                 //SUBMODULE
                 PrescriptionItems = dto.Items.Select(x => new PrescriptionItem
@@ -62,8 +62,6 @@ namespace Doccure.PrescriptionService.Services.PrescriptionService
                  .Include(x => x.PrescriptionItems)
                  .FirstOrDefaultAsync(x => x.PatientId == pateientId);
             return _mapper.Map<List<ResultPrescriptionDto>>(value);
-        }
-
-     
+        }   
     }
 }

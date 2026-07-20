@@ -1,9 +1,15 @@
 using Doccure.PrescriptionService.Context;
+using Doccure.PrescriptionService.Services.PrescriptionService;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// AutoMapper Kaydý 
+builder.Services.AddAutoMapper(typeof(Program));
+
+// Prescription Service Kaydý
+builder.Services.AddScoped<IPrescriptionService, PrescriptionService>();//IPrescriptionService interfacesini gorunce PrescriptionService classýna yönel
 
 builder.Services.AddControllers();
 
