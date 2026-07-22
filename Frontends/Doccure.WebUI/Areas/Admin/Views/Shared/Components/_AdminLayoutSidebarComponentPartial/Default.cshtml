@@ -1,4 +1,4 @@
-﻿﻿<aside id="sidebar">
+﻿<aside id="sidebar">
 
     <div class="sb-logo">
         <div class="sb-logo-icon"><i class="bi bi-hospital"></i></div>
@@ -19,35 +19,48 @@
 
         <div class="sb-group-label">Klinik</div>
 
-        <a href="/Admin/Branch/BranchList/" style="text-decoration: none; color: inherit;">
-            <div class="sb-item active" data-label="Branşlar">
+        <!-- BRANŞLAR -->
+        <a href="/Admin/Branch/BranchList" style="text-decoration: none; color: inherit;">
+            <div class="sb-item" data-label="Branşlar">
                 <i class="bi bi-diagram-3 sb-item-icon"></i>
                 <span class="sb-item-label">Branşlar</span>
             </div>
         </a>
 
-        <div class="sb-item" data-label="Doktorlar">
-            <i class="bi bi-person-badge sb-item-icon"></i>
-            <span class="sb-item-label">Doktorlar</span>
-        </div>
+        <!-- DOKTORLAR -->
+        <a href="/Admin/Doctor/DoctorList" style="text-decoration: none; color: inherit;">
+            <div class="sb-item" data-label="Doktorlar">
+                <i class="bi bi-person-badge sb-item-icon"></i>
+                <span class="sb-item-label">Doktorlar</span>
+            </div>
+        </a>
 
-        <div class="sb-item" data-label="Hastalar">
-            <i class="bi bi-people sb-item-icon"></i>
-            <span class="sb-item-label">Hastalar</span>
-        </div>
+        <!-- HASTALAR -->
+        <a href="/Admin/Patient/PatientList" style="text-decoration: none; color: inherit;">
+            <div class="sb-item" data-label="Hastalar">
+                <i class="bi bi-people sb-item-icon"></i>
+                <span class="sb-item-label">Hastalar</span>
+            </div>
+        </a>
 
-        <div class="sb-item" data-label="Hemşireler">
-            <i class="bi bi-heart-pulse sb-item-icon"></i>
-            <span class="sb-item-label">Hemşireler</span>
-        </div>
+        <!-- HEMŞİRELER -->
+        <a href="/Admin/Nurse/NurseList" style="text-decoration: none; color: inherit;">
+            <div class="sb-item" data-label="Hemşireler">
+                <i class="bi bi-heart-pulse sb-item-icon"></i>
+                <span class="sb-item-label">Hemşireler</span>
+            </div>
+        </a>
 
         <div class="sb-group-label">İşlemler</div>
 
-        <div class="sb-item" data-label="Randevular">
-            <i class="bi bi-calendar3 sb-item-icon"></i>
-            <span class="sb-item-label">Randevular</span>
-            <span class="sb-badge">12</span>
-        </div>
+        <!-- RANDEVULAR (Yeni Eklenen/Eşleştirilen Alan) -->
+        <a href="/Admin/Appointment/AppointmentList" style="text-decoration: none; color: inherit;">
+            <div class="sb-item" data-label="Randevular">
+                <i class="bi bi-calendar3 sb-item-icon"></i>
+                <span class="sb-item-label">Randevular</span>
+                <span class="sb-badge">12</span>
+            </div>
+        </a>
 
         <div class="sb-item" data-label="Reçeteler">
             <i class="bi bi-file-medical sb-item-icon"></i>

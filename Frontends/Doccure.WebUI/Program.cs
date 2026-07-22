@@ -11,24 +11,32 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
-};
+}
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
-
 
 app.UseRouting();
 
 app.UseAuthorization();
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllerRoute(
-      name: "areas",
-      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
-    );
-});
+
+// --- ESKÝ DEFAULT ROTA (Ýhtiyaç durumunda açmak için yorum satýrýna alýndý) ---
+// app.MapControllerRoute(
+//     name: "default",
+//     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+// --- YENÝ DEFAULT ROTA (Proje baþlayýnca direkt Admin/Branch/BranchList açar) ---
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{area=Admin}/{controller=Branch}/{action=BranchList}/{id?}");
+
+// --- ESKÝ AREA ENDPOINT YAZIMI (UseEndpoints ASP.NET Core 6+ ile genelde gerekmez ama korundu) ---
+// app.UseEndpoints(endpoints =>
+// {
+//     endpoints.MapControllerRoute(
+//       name: "areas",
+//       pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+//     );
+// });
 
 app.Run();
