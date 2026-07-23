@@ -19,12 +19,10 @@ namespace Doccure.IdentityService.Controllers
         [HttpPost]
         public async Task<IActionResult> UserLogin(LoginDto dto)
         {
-            var result = await _authService.LoginAsync(dto);
-
-            if (!result)
-                return BadRequest("emial veya şifre hatalı.");
-
-            return Ok("giriş başarılı.");
+            var token = await _authService.LoginAsync(dto);//LoginAsync methodundan gelen user ile dto yu eşledik .dto endpointten geliyor 
+            if (token==null)
+                return Unauthorized("emial veya şifre hatalı");
+            return Ok(new {token});//başarılı ise geriye token değerini dön 
         }
 
     }
