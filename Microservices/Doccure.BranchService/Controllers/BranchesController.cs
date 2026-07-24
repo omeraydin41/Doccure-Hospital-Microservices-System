@@ -8,7 +8,7 @@ namespace Doccure.BranchService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class BranchesController : ControllerBase
     {
         private readonly IBranchService _branchService;
@@ -19,6 +19,8 @@ namespace Doccure.BranchService.Controllers
         }
 
         [HttpGet]
+        //[Authorize(Roles ="Admin")]//Authorize : sistemde yetki belirleme yapılır
+                                   //| Bu endpoint'e sadece kimliği doğrulanmış (authenticated) VE Admin rolüne sahip kullanıcılar erişebilir.
         public async Task<IActionResult> BranchList()
         {
             var values = await _branchService.GetAllAsync();

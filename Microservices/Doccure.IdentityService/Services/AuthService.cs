@@ -41,7 +41,7 @@ namespace Doccure.IdentityService.Services
             return await GenerateToken(user);//başarılı ise token üretildi 
         }
 
-        private async Task<string> GenerateToken(AppUser user)
+        private async Task<string> GenerateToken(AppUser user)//token strıng halde tutulmalı
         {
             // appsettings.json içerisindeki Jwt ayarları alındı.
             var jwtSettings = _configuration.GetSection("Jwt");
